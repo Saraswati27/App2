@@ -1,0 +1,22 @@
+<h1>List of Books </h1>
+
+<% if @books.blank? %>
+	<p>There are not any books currently in the system.</p>
+
+<% else %>
+	<p>These are the current books in our system</p>
+
+	<ul id = "books">
+	<h5>ID Name Author Price </h5>
+	<% @books.each do |bk| %>
+	
+    <li><%= bk.id %> 
+	<%=  bk.name %>
+	<%=  bk.author %>
+	<%=  bk.price  %> </li>
+
+	<% end %> 
+
+
+	</ul>
+<% end %>
